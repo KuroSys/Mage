@@ -3,6 +3,8 @@
 Mage is a file dropper which is undetected by Windows Defender. It will drop any Payload and execute it without detection. 
 
 
+
+
 To-Do
 
 ✔️ > File Dropper + Undected on Windows Defender
