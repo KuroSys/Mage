@@ -5,6 +5,8 @@ Mage is a file dropper which is undetected by Windows Defender. It will drop any
 
 To-Do
 
+✔️ > File Dropper + Undected on Windows Defender
+
 ✔️ > Privileges Escelation Exploit
 
 ❌ > Sandbox Escaper 
