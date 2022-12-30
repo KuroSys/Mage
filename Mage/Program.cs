@@ -43,7 +43,7 @@ namespace Mage
                     if (process.ProcessName.Contains("_"))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("\n[!] Process name contains underscore"); // Error 2 = Prozess wurde mit "_" gestartet (Possible Sandbox enviroment + Process clone or debugging)
+                        Console.WriteLine("\n[!] Process name contains underscore"); // Error 2 = Process was started with "_" (Possible Sandbox enviroment + Process clone or debugging)
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         return;
@@ -72,7 +72,7 @@ namespace Mage
                     catch (UnauthorizedAccessException)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("[!] Unable to write file in Path!"); // Error 3 = Keine berechtigung Dateien zu Schreiben in Pfad (Possible Sandbox enviroment)
+                        Console.WriteLine("[!] Unable to write file in Path!"); // Error 3 = No permissions to write in path (Possible Sandbox enviroment)
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         return;
@@ -83,7 +83,7 @@ namespace Mage
                     if (GetKeyboards().Count() == 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("[!] No keyboard detected!"); // Error 4 = Keine Tastatur gefunden (Possible Sandbox enviroment)
+                        Console.WriteLine("[!] No keyboard detected!"); // Error 4 = No keyboard detected (Possible Sandbox enviroment)
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                         return;
@@ -91,7 +91,7 @@ namespace Mage
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\n[+] Keyboard detected!"); // Error 2 = Prozess wurde mit "_" gestartet (Possible Sandbox enviroment + Process clone or debugging)
+                        Console.WriteLine("\n[+] Keyboard detected!"); 
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey();
                     }
@@ -166,7 +166,7 @@ namespace Mage
                     if (prozess.ProcessName.Contains("_"))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("[i] Process name contains underscore (2). Exiting in 5 seconds."); // Error 2 = Prozess wurde mit "_" gestartet (Possible Sandbox enviroment + Process clone or debugging)
+                        Console.WriteLine("[i] Process name contains underscore (2). Exiting in 5 seconds."); // Error 2 = Process was started with "_" (Possible Sandbox enviroment + Process clone or debugging)
                         Console.ForegroundColor = ConsoleColor.White;
                         Thread.Sleep(5000);
                         return;
@@ -189,7 +189,7 @@ namespace Mage
                     catch (UnauthorizedAccessException)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("[!] Unable to write file in Path! Exiting in 5 seconds."); // Error 3 = Keine berechtigung Dateien zu Schreiben in Pfad (Possible Sandbox enviroment)
+                        Console.WriteLine("[!] Unable to write file in Path! Exiting in 5 seconds."); // Error 3 = No permissions to write in path (Possible Sandbox enviroment)
                         Console.ForegroundColor = ConsoleColor.White;
                         Thread.Sleep(5000);
                         return;
@@ -198,7 +198,7 @@ namespace Mage
                     if (GetKeyboards().Count() == 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("[i] No keyboard detected! Exiting in 5 seconds."); // Error 4 = Keine Tastatur gefunden (Possible Sandbox enviroment)
+                        Console.WriteLine("[i] No keyboard detected! Exiting in 5 seconds."); // Error 4 = No keyboard found (Possible Sandbox enviroment)
                         Console.ForegroundColor = ConsoleColor.White;
                         Thread.Sleep(5000);
                         return;
@@ -276,7 +276,7 @@ namespace Mage
 
                 if (process.ProcessName.Contains("_"))
                 {
-                    Console.WriteLine("Unable to start Application (Error: 2)! Exiting in 5 seconds."); // Error 2 = Prozess wurde mit "_" gestartet (Possible Sandbox enviroment + Process clone or debugging)
+                    Console.WriteLine("Unable to start Application (Error: 2)! Exiting in 5 seconds."); // Error 2 = Process was started with "_" (Possible Sandbox enviroment + Process clone or debugging)
                     Thread.Sleep(5000);
                     return;
                 }
@@ -290,14 +290,14 @@ namespace Mage
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    Console.WriteLine("Unable to start Application (Error: 3)! Exiting in 5 seconds."); // Error 3 = Keine berechtigung Dateien zu Schreiben in Pfad (Possible Sandbox enviroment)
+                    Console.WriteLine("Unable to start Application (Error: 3)! Exiting in 5 seconds."); // Error 3 = No permissions to write in path (Possible Sandbox enviroment)
                     Thread.Sleep(5000);
                     return;
                 }
 
                 if (GetKeyboards().Count() == 0)
                 {
-                    Console.WriteLine("Unable to start Application (Error: 4)! Exiting in 5 seconds."); // Error 4 = Keine Tastatur gefunden (Possible Sandbox enviroment)
+                    Console.WriteLine("Unable to start Application (Error: 4)! Exiting in 5 seconds."); // Error 4 = No keyboard found (Possible Sandbox enviroment)
                     Thread.Sleep(5000);
                     return;
                 }
