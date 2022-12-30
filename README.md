@@ -4,9 +4,9 @@ Mage is an Windows defender bypass which requires Admin Permissions. I also got 
 
 Download URL for you payload, final filename, dev mode (test simple anti Sandbox functions), fake error message can be configured in the Option section (Line 17-21). 
 
-[!] Its not fully hidden as of now and you can still improve Mage on your own.
+[ ! ] Its not fully hidden as of now and you can still improve Mage on your own.
 
-[i] Use Visual Studio 2022 to compile.
+[ i ] Use Visual Studio 2022 to compile.
 
 
 [>] Educational purpose only!
