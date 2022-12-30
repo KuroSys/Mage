@@ -1,0 +1,2 @@
+C:\Users\root\Documents\Repos\Mage\Mage\bin\Release\net6.0\publish\win-x64\Mage.pdb
+C:\Users\root\Documents\Repos\Mage\Mage\bin\Release\net6.0\publish\win-x64\Mage.exe
