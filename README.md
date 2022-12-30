@@ -1,6 +1,6 @@
 # Mage
 
-Mage is an Windows defender bypass which requires Admin Permissions. I also got an UAC Bypass which uses a simple Exploit to gain Admin permissions without any user interaction. Maybe i will drop this exploit here later on. Mage uses the exclusion command to whitelist your payload. It will be excluded, dropped on the system and executed. 
+Mage is an Windows defender bypass which requires Admin Permissions. I also got an UAC Bypass which uses a simple Exploit to gain Admin permissions without any user interaction. Maybe i will drop this exploit here later on. Mage uses the exclusion command to whitelist your payload. It will be excluded, dropped on the system and executed. It is fully undetected on windows 10 (Not tested on windows 11).
 
 Download URL for you payload, final filename, dev mode (test simple anti Sandbox functions), fake error message can be configured in the Option section (Line 17-21). 
 
